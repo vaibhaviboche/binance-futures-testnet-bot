@@ -1,44 +1,36 @@
-\# Simplified Binance Futures Testnet Trading Bot
+\## Run Examples
 
 
 
-This is a small Python CLI-based trading bot built for Binance USDT-M Futures Testnet.  
+Market Order:
 
-It supports MARKET and LIMIT orders with BUY and SELL sides.
-
-
-
-\## Features
+python cli.py --symbol BTCUSDT --side BUY --type MARKET --quantity 0.001
 
 
 
-\- Place MARKET orders
+Limit Order:
 
-\- Place LIMIT orders
-
-\- Supports BUY and SELL
-
-\- CLI input validation
-
-\- Separate client and order layers
-
-\- Logs API requests, responses, and errors
-
-\- Handles API, validation, and network errors
+python cli.py --symbol BTCUSDT --side SELL --type LIMIT --quantity 0.001 --price 90000
 
 
 
-\## Setup
+\## Environment Variables
 
 
 
-1\. Clone the repository.
+Create a `.env` file:
 
 
 
-```bash
+BINANCE\_API\_KEY=your\_api\_key
 
-git clone your\_repo\_link
+BINANCE\_API\_SECRET=your\_api\_secret
 
-cd trading\_bot
+
+
+\## Logs
+
+
+
+Logs are generated in `logs/trading\_bot.log`
 
